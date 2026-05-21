@@ -20,6 +20,29 @@ const socialLinks = [
   },
 ] as const;
 
+function LbvWordmark() {
+  return (
+    <svg
+      aria-label="LBV"
+      className="h-12 w-72 text-[#d4af37] drop-shadow-[0_0_18px_rgba(212,175,55,0.42)] sm:h-14 sm:w-96 md:h-16 md:w-[28rem]"
+      viewBox="0 0 520 96"
+      role="img"
+    >
+      <g fill="currentColor" transform="skewX(-8)">
+        <path d="M10 18L22 8H112L124 18V57H202L214 67V88L202 96H22L10 88V18Z" />
+        <path
+          d="M238 18L250 8H390L405 20V43L395 50L415 59V85L400 96H250L238 88V18ZM315 26V40H368L376 35V31L368 26H315ZM315 60V76H382L391 70V66L382 60H315Z"
+          fillRule="evenodd"
+        />
+        <path d="M430 8H487L476 20L461 78H442L430 8Z" />
+        <path d="M492 8H550L496 96H449L459 84L492 8Z" />
+      </g>
+      <rect x="8" y="43" width="504" height="6" fill="#0b0b0b" />
+      <rect x="8" y="63" width="504" height="6" fill="#0b0b0b" />
+    </svg>
+  );
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
   const isOnUsPage = pathname === '/on-us';
@@ -32,22 +55,12 @@ export function SiteHeader() {
     <header className="border-b border-white/10 bg-[#0b0b0b]">
       <div className="container mx-auto flex flex-col gap-4 px-4 py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
-          <div className="relative inline-flex overflow-hidden border-y-2 border-[#c6a15b]/55 bg-black px-4 py-2 shadow-[0_0_28px_rgba(198,161,91,0.2)]">
+          <div className="relative inline-flex overflow-hidden border-y-2 border-[#c6a15b]/55 bg-black px-3 py-2 shadow-[0_0_28px_rgba(198,161,91,0.2)]">
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
             />
-            <div className="relative text-5xl font-black uppercase italic leading-[0.82] tracking-[0.2em] text-[#d4af37] [font-family:Impact,Haettenschweiler,'Arial_Narrow_Bold',sans-serif] [text-shadow:0_0_18px_rgba(212,175,55,0.42)] [transform:skew(-10deg)] sm:text-6xl md:text-7xl">
-              LBV
-              <span
-                aria-hidden="true"
-                className="absolute -left-2 top-[33%] h-[4px] w-[108%] bg-[#0b0b0b]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute -left-2 top-[62%] h-[4px] w-[108%] bg-[#0b0b0b]"
-              />
-            </div>
+            <LbvWordmark />
           </div>
           <p className="max-w-[220px] text-xs font-semibold uppercase tracking-[0.14em] text-white/60 sm:max-w-none">
             If We&apos;re There; It&apos;s an Event.
