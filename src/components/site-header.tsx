@@ -24,7 +24,7 @@ function LbvWordmark() {
   return (
     <div
       aria-label="LBV"
-      className="lbv-logo-font absolute bottom-7 left-4 right-4 top-7 flex items-center justify-center overflow-hidden text-[clamp(2.8rem,9vw,5.9rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
+      className="lbv-logo-font absolute bottom-2 left-4 right-4 top-11 flex items-center justify-center overflow-hidden text-[clamp(2.55rem,8vw,5.1rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
       role="img"
     >
       LBV
