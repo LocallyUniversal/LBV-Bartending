@@ -31,9 +31,23 @@ export function SiteHeader() {
   return (
     <header className="border-b border-white/10 bg-[#0b0b0b]">
       <div className="container mx-auto flex flex-col gap-4 px-4 py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center">
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
-          <div className="text-5xl font-bold uppercase leading-none tracking-[0.22em] text-[#d4af37] sm:text-6xl md:text-7xl">
-            LBV
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
+          <div className="relative inline-flex overflow-hidden border-y-2 border-[#c6a15b]/55 bg-black px-4 py-2 shadow-[0_0_28px_rgba(198,161,91,0.2)]">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
+            />
+            <div className="relative text-5xl font-black uppercase italic leading-[0.82] tracking-[0.2em] text-[#d4af37] [font-family:Impact,Haettenschweiler,'Arial_Narrow_Bold',sans-serif] [text-shadow:0_0_18px_rgba(212,175,55,0.42)] [transform:skew(-10deg)] sm:text-6xl md:text-7xl">
+              LBV
+              <span
+                aria-hidden="true"
+                className="absolute -left-2 top-[33%] h-[4px] w-[108%] bg-[#0b0b0b]"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -left-2 top-[62%] h-[4px] w-[108%] bg-[#0b0b0b]"
+              />
+            </div>
           </div>
           <p className="max-w-[220px] text-xs font-semibold uppercase tracking-[0.14em] text-white/60 sm:max-w-none">
             If We&apos;re There; It&apos;s an Event.
