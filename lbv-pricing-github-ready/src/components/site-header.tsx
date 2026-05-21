@@ -24,21 +24,20 @@ function LbvWordmark() {
   return (
     <svg
       aria-label="LBV"
-      className="h-12 w-72 text-[#d4af37] drop-shadow-[0_0_18px_rgba(212,175,55,0.42)] sm:h-14 sm:w-96 md:h-16 md:w-[28rem]"
-      viewBox="0 0 520 96"
+      className="h-14 w-full text-[#d4af37] drop-shadow-[0_0_16px_rgba(212,175,55,0.36)] sm:h-16 md:h-20"
+      viewBox="0 0 900 110"
       role="img"
+      preserveAspectRatio="none"
     >
-      <g fill="currentColor" transform="skewX(-8)">
-        <path d="M10 18L22 8H112L124 18V57H202L214 67V88L202 96H22L10 88V18Z" />
+      <g fill="currentColor" transform="skewX(-5)">
+        <path d="M18 16H112L122 26V74H260L270 84V94L260 104H28L18 94V16Z" />
         <path
-          d="M238 18L250 8H390L405 20V43L395 50L415 59V85L400 96H250L238 88V18ZM315 26V40H368L376 35V31L368 26H315ZM315 60V76H382L391 70V66L382 60H315Z"
+          d="M326 16H548L564 30V49L551 58L570 70V90L554 104H336L326 94V16ZM430 32V49H512L521 43V38L512 32H430ZM430 70V88H524L534 82V76L524 70H430Z"
           fillRule="evenodd"
         />
-        <path d="M430 8H487L476 20L461 78H442L430 8Z" />
-        <path d="M492 8H550L496 96H449L459 84L492 8Z" />
+        <path d="M620 16H714L686 104H650L620 16Z" />
+        <path d="M754 16H848L766 104H716L754 16Z" />
       </g>
-      <rect x="8" y="43" width="504" height="6" fill="#0b0b0b" />
-      <rect x="8" y="63" width="504" height="6" fill="#0b0b0b" />
     </svg>
   );
 }
@@ -53,49 +52,49 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-white/10 bg-[#0b0b0b]">
-      <div className="container mx-auto flex flex-col gap-4 px-4 py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
-          <div className="relative inline-flex overflow-hidden border-y-2 border-[#c6a15b]/55 bg-black px-3 py-2 shadow-[0_0_28px_rgba(198,161,91,0.2)]">
+      <div className="container mx-auto flex flex-col gap-4 px-4 py-4">
+        <div className="relative overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 py-2 shadow-[0_0_24px_rgba(198,161,91,0.16)]">
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
             />
             <LbvWordmark />
-          </div>
-          <p className="max-w-[220px] text-xs font-semibold uppercase tracking-[0.14em] text-white/60 sm:max-w-none">
+        </div>
+        <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-white/60 md:text-left">
             If We&apos;re There; It&apos;s an Event.
           </p>
-        </div>
-        <nav
-          aria-label="Social media"
-          className="flex items-center justify-center gap-3"
-        >
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              aria-label={social.name}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c6a15b]/35 text-[#d4af37] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
-            >
-              <svg
-                aria-hidden="true"
-                className="h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d={social.path} />
-              </svg>
-            </a>
-          ))}
-        </nav>
-        <nav aria-label="Primary navigation" className="justify-self-end">
-          <a
-            href={navLink.href}
-            className="text-sm uppercase tracking-[0.14em] text-white/70 transition hover:text-white"
+          <nav
+            aria-label="Social media"
+            className="flex items-center justify-center gap-3"
           >
-            {navLink.label}
-          </a>
-        </nav>
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                aria-label={social.name}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c6a15b]/35 text-[#d4af37] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d={social.path} />
+                </svg>
+              </a>
+            ))}
+          </nav>
+          <nav aria-label="Primary navigation" className="text-center md:text-right">
+            <a
+              href={navLink.href}
+              className="text-sm uppercase tracking-[0.14em] text-white/70 transition hover:text-white"
+            >
+              {navLink.label}
+            </a>
+          </nav>
+        </div>
       </div>
     </header>
   );
