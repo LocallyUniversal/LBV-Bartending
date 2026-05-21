@@ -21,41 +21,38 @@ const socialLinks = [
 ] as const;
 
 function LbvWordmark() {
-  const letterPaths = (
-    <>
-      <path d="M18 16H112L122 26V74H260L270 84V94L260 104H28L18 94V16Z" />
-      <path
-        d="M326 16H548L564 30V49L551 58L570 70V90L554 104H336L326 94V16ZM430 32V49H512L521 43V38L512 32H430ZM430 70V88H524L534 82V76L524 70H430Z"
-        fillRule="evenodd"
-      />
-      <path d="M620 16H714L686 104H650L620 16Z" />
-      <path d="M754 16H848L766 104H716L754 16Z" />
-    </>
-  );
-
   return (
     <svg
       aria-label="LBV"
-      className="h-20 w-full text-[#d4af37] drop-shadow-[0_0_16px_rgba(212,175,55,0.36)] sm:h-24 md:h-32"
-      viewBox="0 0 900 110"
+      className="h-20 w-full drop-shadow-[0_0_16px_rgba(212,175,55,0.32)] sm:h-24 md:h-32"
+      viewBox="0 0 900 120"
       role="img"
       preserveAspectRatio="none"
     >
       <defs>
-        <clipPath id="lbv-wordmark-top">
-          <rect x="0" y="0" width="900" height="55" />
-        </clipPath>
+        <linearGradient id="lbv-gold-stroke" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stopColor="#f2d675" />
+          <stop offset="55%" stopColor="#d4af37" />
+          <stop offset="100%" stopColor="#8a6a1d" />
+        </linearGradient>
       </defs>
-      <g fill="currentColor" transform="skewX(-5)">
-        {letterPaths}
-      </g>
       <g
-        clipPath="url(#lbv-wordmark-top)"
-        fill="currentColor"
-        transform="translate(18 0) skewX(-5)"
+        fill="#111111"
+        stroke="url(#lbv-gold-stroke)"
+        strokeLinejoin="miter"
+        strokeWidth="7"
+        transform="skewX(-5)"
       >
-        {letterPaths}
+        <path d="M28 22H268V45H105V75H268V98H28V22Z" />
+        <path
+          d="M330 22H570V54L546 61L570 70V98H330V22ZM415 40V53H503L516 48V45L503 40H415ZM415 69V82H512L525 77V74L512 69H415Z"
+          fillRule="evenodd"
+        />
+        <path d="M622 22H708L748 98H696L665 43L634 98H582L622 22Z" />
       </g>
+      <path d="M50 34H236" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M352 34H548" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M633 34H697" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
     </svg>
   );
 }
@@ -80,23 +77,20 @@ export function SiteHeader() {
           <div className="absolute left-0 right-0 top-4 z-10 border-y border-[#c6a15b]/30 bg-gradient-to-r from-transparent via-[#0b0b0b]/90 to-transparent py-1 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-xs">
             If We&apos;re There; It&apos;s an Event.
           </div>
-        </div>
-        <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
-          <div aria-hidden="true" />
           <nav
             aria-label="Social media"
-            className="flex items-center justify-center gap-3"
+            className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2"
           >
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 aria-label={social.name}
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#c6a15b]/35 text-[#d4af37] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-[#c6a15b]/40 bg-[#0b0b0b]/80 text-[#d4af37] shadow-[0_0_14px_rgba(0,0,0,0.65)] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
               >
                 <svg
                   aria-hidden="true"
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -105,6 +99,10 @@ export function SiteHeader() {
               </a>
             ))}
           </nav>
+        </div>
+        <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+          <div aria-hidden="true" />
+          <div aria-hidden="true" />
           <nav aria-label="Primary navigation" className="text-center md:text-right">
             <a
               href={navLink.href}
