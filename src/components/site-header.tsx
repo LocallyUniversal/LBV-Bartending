@@ -3,7 +3,7 @@ export function SiteHeader() {
     <header className="border-b border-white/10 bg-[#0b0b0b]">
       <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-4">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
-          <div className="text-3xl font-bold uppercase tracking-[0.24em] text-[#d4af37] md:text-5xl">
+          <div className="text-5xl font-bold uppercase leading-none tracking-[0.22em] text-[#d4af37] sm:text-6xl md:text-7xl">
             LBV
           </div>
           <p className="max-w-[220px] text-xs font-semibold uppercase tracking-[0.14em] text-white/60 sm:max-w-none">
