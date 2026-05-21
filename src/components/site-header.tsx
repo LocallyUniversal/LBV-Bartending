@@ -41,18 +41,19 @@ function LbvWordmark() {
         stroke="url(#lbv-gold-stroke)"
         strokeLinejoin="miter"
         strokeWidth="7"
-        transform="skewX(-5)"
+        transform="skewX(-4)"
       >
-        <path d="M28 22H268V45H105V75H268V98H28V22Z" />
+        <path d="M35 22H118V76H268V98H35V22Z" />
         <path
-          d="M330 22H570V54L546 61L570 70V98H330V22ZM415 40V53H503L516 48V45L503 40H415ZM415 69V82H512L525 77V74L512 69H415Z"
+          d="M332 22H472C531 22 560 39 560 62C560 85 531 98 472 98H332V22ZM415 39V53H471C489 53 501 50 501 46C501 42 489 39 471 39H415ZM415 67V82H477C496 82 509 79 509 74C509 70 496 67 477 67H415Z"
           fillRule="evenodd"
         />
-        <path d="M622 22H708L748 98H696L665 43L634 98H582L622 22Z" />
+        <path d="M625 22H700L736 76L772 22H847L784 98H688L625 22Z" />
       </g>
-      <path d="M50 34H236" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
-      <path d="M352 34H548" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
-      <path d="M633 34H697" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M54 36H104" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M356 36H526" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M648 36H691" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M780 36H824" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
     </svg>
   );
 }
