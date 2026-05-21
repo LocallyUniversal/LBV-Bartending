@@ -21,22 +21,40 @@ const socialLinks = [
 ] as const;
 
 function LbvWordmark() {
+  const letterPaths = (
+    <>
+      <path d="M18 16H112L122 26V74H260L270 84V94L260 104H28L18 94V16Z" />
+      <path
+        d="M326 16H548L564 30V49L551 58L570 70V90L554 104H336L326 94V16ZM430 32V49H512L521 43V38L512 32H430ZM430 70V88H524L534 82V76L524 70H430Z"
+        fillRule="evenodd"
+      />
+      <path d="M620 16H714L686 104H650L620 16Z" />
+      <path d="M754 16H848L766 104H716L754 16Z" />
+    </>
+  );
+
   return (
     <svg
       aria-label="LBV"
-      className="h-14 w-full text-[#d4af37] drop-shadow-[0_0_16px_rgba(212,175,55,0.36)] sm:h-16 md:h-20"
+      className="h-20 w-full text-[#d4af37] drop-shadow-[0_0_16px_rgba(212,175,55,0.36)] sm:h-24 md:h-32"
       viewBox="0 0 900 110"
       role="img"
       preserveAspectRatio="none"
     >
+      <defs>
+        <clipPath id="lbv-wordmark-top">
+          <rect x="0" y="0" width="900" height="55" />
+        </clipPath>
+      </defs>
       <g fill="currentColor" transform="skewX(-5)">
-        <path d="M18 16H112L122 26V74H260L270 84V94L260 104H28L18 94V16Z" />
-        <path
-          d="M326 16H548L564 30V49L551 58L570 70V90L554 104H336L326 94V16ZM430 32V49H512L521 43V38L512 32H430ZM430 70V88H524L534 82V76L524 70H430Z"
-          fillRule="evenodd"
-        />
-        <path d="M620 16H714L686 104H650L620 16Z" />
-        <path d="M754 16H848L766 104H716L754 16Z" />
+        {letterPaths}
+      </g>
+      <g
+        clipPath="url(#lbv-wordmark-top)"
+        fill="currentColor"
+        transform="translate(18 0) skewX(-5)"
+      >
+        {letterPaths}
       </g>
     </svg>
   );
@@ -52,18 +70,19 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-white/10 bg-[#0b0b0b]">
-      <div className="container mx-auto flex flex-col gap-4 px-4 py-4">
-        <div className="relative overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 py-2 shadow-[0_0_24px_rgba(198,161,91,0.16)]">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
-            />
-            <LbvWordmark />
+      <div className="container mx-auto flex flex-col gap-3 px-4 py-4">
+        <div className="relative overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 py-1 shadow-[0_0_24px_rgba(198,161,91,0.16)]">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
+          />
+          <LbvWordmark />
+          <div className="absolute left-0 right-0 top-4 z-10 border-y border-[#c6a15b]/30 bg-gradient-to-r from-transparent via-[#0b0b0b]/90 to-transparent py-1 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-xs">
+            If We&apos;re There; It&apos;s an Event.
+          </div>
         </div>
         <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-white/60 md:text-left">
-            If We&apos;re There; It&apos;s an Event.
-          </p>
+          <div aria-hidden="true" />
           <nav
             aria-label="Social media"
             className="flex items-center justify-center gap-3"
@@ -73,11 +92,11 @@ export function SiteHeader() {
                 key={social.name}
                 href={social.href}
                 aria-label={social.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c6a15b]/35 text-[#d4af37] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#c6a15b]/35 text-[#d4af37] transition hover:border-[#c6a15b]/70 hover:bg-[#c6a15b]/10 hover:text-white"
               >
                 <svg
                   aria-hidden="true"
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
