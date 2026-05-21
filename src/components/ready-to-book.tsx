@@ -18,7 +18,11 @@ export function ReadyToBook() {
           Get in Touch
         </a>
         <p className="mt-12 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]/55">
-          A CritiCal Concepts Design
+          A Criti
+          <span className="text-[#1f5f9f] drop-shadow-[0_0_10px_rgba(31,95,159,0.75)]">
+            Cal
+          </span>{' '}
+          Concepts Design
         </p>
       </div>
     </section>
