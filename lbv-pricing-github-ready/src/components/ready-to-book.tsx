@@ -14,6 +14,9 @@ export function ReadyToBook() {
         >
           Get in Touch
         </a>
+        <p className="mt-12 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]/55">
+          A CritiCal Concepts Design
+        </p>
       </div>
     </section>
   );
