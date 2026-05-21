@@ -50,10 +50,7 @@ function LbvWordmark() {
         />
         <path d="M625 22H700L736 76L772 22H847L784 98H688L625 22Z" />
       </g>
-      <path d="M54 36H104" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
-      <path d="M356 36H526" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
-      <path d="M648 36H691" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
-      <path d="M780 36H824" stroke="#f7e7a5" strokeLinecap="square" strokeWidth="4" />
+      <path d="M535 23H565L565 47Z" fill="#0b0b0b" />
     </svg>
   );
 }
