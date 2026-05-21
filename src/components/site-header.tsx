@@ -22,36 +22,13 @@ const socialLinks = [
 
 function LbvWordmark() {
   return (
-    <svg
+    <div
       aria-label="LBV"
-      className="h-20 w-full drop-shadow-[0_0_16px_rgba(212,175,55,0.32)] sm:h-24 md:h-32"
-      viewBox="0 0 900 120"
+      className="lbv-logo-font flex h-20 w-full items-center justify-center overflow-hidden text-[clamp(5.6rem,24vw,15rem)] leading-[0.72] tracking-[0.06em] text-[#d4af37] sm:h-24 md:h-32"
       role="img"
-      preserveAspectRatio="none"
     >
-      <defs>
-        <linearGradient id="lbv-gold-stroke" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stopColor="#f2d675" />
-          <stop offset="55%" stopColor="#d4af37" />
-          <stop offset="100%" stopColor="#8a6a1d" />
-        </linearGradient>
-      </defs>
-      <g
-        fill="#111111"
-        stroke="url(#lbv-gold-stroke)"
-        strokeLinejoin="miter"
-        strokeWidth="7"
-        transform="skewX(-4)"
-      >
-        <path d="M35 22H118V76H268V98H35V22Z" />
-        <path
-          d="M332 22H472C531 22 560 39 560 62C560 85 531 98 472 98H332V22ZM415 39V53H471C489 53 501 50 501 46C501 42 489 39 471 39H415ZM415 67V82H477C496 82 509 79 509 74C509 70 496 67 477 67H415Z"
-          fillRule="evenodd"
-        />
-        <path d="M625 22H700L736 76L772 22H847L784 98H688L625 22Z" />
-      </g>
-      <path d="M535 23H565L565 47Z" fill="#0b0b0b" />
-    </svg>
+      LBV
+    </div>
   );
 }
 
