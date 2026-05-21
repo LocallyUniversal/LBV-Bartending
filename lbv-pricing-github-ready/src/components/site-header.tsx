@@ -1,3 +1,7 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+
 const socialLinks = [
   {
     name: 'Instagram',
@@ -17,6 +21,13 @@ const socialLinks = [
 ] as const;
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const isOnUsPage = pathname === '/on-us';
+  const navLink = {
+    href: isOnUsPage ? '/pricing' : '/on-us',
+    label: isOnUsPage ? 'Pricing' : 'On Us',
+  };
+
   return (
     <header className="border-b border-white/10 bg-[#0b0b0b]">
       <div className="container mx-auto flex flex-col gap-4 px-4 py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center">
@@ -52,10 +63,10 @@ export function SiteHeader() {
         </nav>
         <nav aria-label="Primary navigation" className="justify-self-end">
           <a
-            href="#"
+            href={navLink.href}
             className="text-sm uppercase tracking-[0.14em] text-white/70 transition hover:text-white"
           >
-            Pricing
+            {navLink.label}
           </a>
         </nav>
       </div>
