@@ -24,7 +24,7 @@ function LbvWordmark() {
   return (
     <div
       aria-label="LBV"
-      className="lbv-logo-font absolute -bottom-3 left-4 right-4 top-14 flex items-center justify-center overflow-hidden text-[clamp(2.45rem,7.5vw,4.8rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
+      className="lbv-logo-font absolute bottom-8 left-2 right-2 top-7 flex items-center justify-center overflow-hidden text-[clamp(4.6rem,22vw,9rem)] leading-none tracking-[0.03em] text-[#d4af37] [transform:scaleX(0.94)] sm:left-4 sm:right-4 sm:text-[clamp(5.2rem,18vw,10.5rem)]"
       role="img"
     >
       LBV
@@ -43,7 +43,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur">
       <div className="container mx-auto px-4 py-3">
-        <div className="relative h-28 overflow-hidden border-y border-[#c6a15b]/40 bg-black shadow-[0_0_24px_rgba(198,161,91,0.16)] sm:h-32">
+        <div className="relative h-32 overflow-hidden border-y border-[#c6a15b]/40 bg-black shadow-[0_0_24px_rgba(198,161,91,0.16)] sm:h-36">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
@@ -51,7 +51,7 @@ export function SiteHeader() {
           <LbvWordmark />
           <nav
             aria-label="Primary navigation"
-            className="absolute right-3 top-3 z-20"
+            className="absolute bottom-2 right-3 z-20"
           >
             <a
               href={navLink.href}
