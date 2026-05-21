@@ -24,7 +24,7 @@ function LbvWordmark() {
   return (
     <div
       aria-label="LBV"
-      className="lbv-logo-font flex h-full w-full items-center justify-center overflow-hidden text-[clamp(4.75rem,16vw,10.5rem)] leading-none tracking-[0.04em] text-[#d4af37]"
+      className="lbv-logo-font absolute bottom-7 left-4 right-4 top-7 flex items-center justify-center overflow-hidden text-[clamp(2.8rem,9vw,5.9rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
       role="img"
     >
       LBV
@@ -43,7 +43,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur">
       <div className="container mx-auto px-4 py-3">
-        <div className="relative h-24 overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 shadow-[0_0_24px_rgba(198,161,91,0.16)] sm:h-28 md:h-32">
+        <div className="relative h-28 overflow-hidden border-y border-[#c6a15b]/40 bg-black shadow-[0_0_24px_rgba(198,161,91,0.16)] sm:h-32">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
@@ -60,12 +60,12 @@ export function SiteHeader() {
               {navLink.label}
             </a>
           </nav>
-          <div className="absolute left-0 right-0 top-4 z-10 border-y border-[#c6a15b]/30 bg-gradient-to-r from-transparent via-[#0b0b0b]/90 to-transparent py-1 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-xs">
+          <div className="absolute left-0 right-0 top-0 z-10 border-b border-[#c6a15b]/30 bg-gradient-to-r from-transparent via-[#0b0b0b]/95 to-transparent py-1 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/75 sm:text-xs">
             If We&apos;re There; It&apos;s an Event.
           </div>
           <nav
             aria-label="Social media"
-            className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2"
+            className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2"
           >
             {socialLinks.map((social) => (
               <a
