@@ -64,7 +64,7 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="border-b border-white/10 bg-[#0b0b0b]">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur">
       <div className="container mx-auto flex flex-col gap-3 px-4 py-4">
         <div className="relative overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 py-1 shadow-[0_0_24px_rgba(198,161,91,0.16)]">
           <div
