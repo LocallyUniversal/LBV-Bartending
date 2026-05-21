@@ -24,7 +24,7 @@ function LbvWordmark() {
   return (
     <div
       aria-label="LBV"
-      className="lbv-logo-font flex h-20 w-full items-center justify-center overflow-hidden text-[clamp(5.6rem,24vw,15rem)] leading-[0.72] tracking-[0.06em] text-[#d4af37] sm:h-24 md:h-32"
+      className="lbv-logo-font flex h-full w-full items-center justify-center overflow-hidden text-[clamp(4.75rem,16vw,10.5rem)] leading-none tracking-[0.04em] text-[#d4af37]"
       role="img"
     >
       LBV
@@ -42,13 +42,24 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur">
-      <div className="container mx-auto flex flex-col gap-3 px-4 py-4">
-        <div className="relative overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 py-1 shadow-[0_0_24px_rgba(198,161,91,0.16)]">
+      <div className="container mx-auto px-4 py-3">
+        <div className="relative h-24 overflow-hidden border-y border-[#c6a15b]/40 bg-black px-3 shadow-[0_0_24px_rgba(198,161,91,0.16)] sm:h-28 md:h-32">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-gradient-to-r from-[#c6a15b]/15 via-transparent to-[#ff1493]/10"
           />
           <LbvWordmark />
+          <nav
+            aria-label="Primary navigation"
+            className="absolute right-3 top-3 z-20"
+          >
+            <a
+              href={navLink.href}
+              className="rounded-full border border-[#c6a15b]/35 bg-[#0b0b0b]/80 px-3 py-1 text-[10px] font-semibold uppercase not-italic tracking-[0.16em] text-white/75 shadow-[0_0_14px_rgba(0,0,0,0.65)] transition hover:border-[#c6a15b]/70 hover:text-white sm:text-xs"
+            >
+              {navLink.label}
+            </a>
+          </nav>
           <div className="absolute left-0 right-0 top-4 z-10 border-y border-[#c6a15b]/30 bg-gradient-to-r from-transparent via-[#0b0b0b]/90 to-transparent py-1 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-xs">
             If We&apos;re There; It&apos;s an Event.
           </div>
@@ -73,18 +84,6 @@ export function SiteHeader() {
                 </svg>
               </a>
             ))}
-          </nav>
-        </div>
-        <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
-          <div aria-hidden="true" />
-          <div aria-hidden="true" />
-          <nav aria-label="Primary navigation" className="text-center md:text-right">
-            <a
-              href={navLink.href}
-              className="text-sm uppercase tracking-[0.14em] text-white/70 transition hover:text-white"
-            >
-              {navLink.label}
-            </a>
           </nav>
         </div>
       </div>
