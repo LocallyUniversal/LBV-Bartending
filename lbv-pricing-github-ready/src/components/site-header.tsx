@@ -24,7 +24,7 @@ function LbvWordmark() {
   return (
     <div
       aria-label="LBV"
-      className="lbv-logo-font absolute bottom-2 left-4 right-4 top-11 flex items-center justify-center overflow-hidden text-[clamp(2.55rem,8vw,5.1rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
+      className="lbv-logo-font absolute -bottom-3 left-4 right-4 top-14 flex items-center justify-center overflow-hidden text-[clamp(2.45rem,7.5vw,4.8rem)] leading-none tracking-[0.02em] text-[#d4af37] [transform:scaleX(0.9)]"
       role="img"
     >
       LBV
@@ -65,7 +65,7 @@ export function SiteHeader() {
           </div>
           <nav
             aria-label="Social media"
-            className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2"
+            className="absolute bottom-1 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2"
           >
             {socialLinks.map((social) => (
               <a
