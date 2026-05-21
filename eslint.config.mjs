@@ -1,3 +1,10 @@
 import nextVitals from 'eslint-config-next/core-web-vitals';
 
-export default [...nextVitals];
+const eslintConfig = [
+  {
+    ignores: ['.next/**', 'node_modules/**', 'lbv-pricing-github-ready/**'],
+  },
+  ...nextVitals,
+];
+
+export default eslintConfig;

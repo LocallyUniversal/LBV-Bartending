@@ -143,6 +143,11 @@ export default function PricingPage() {
             <p className="mx-auto mt-5 max-w-lg text-center text-xl text-white/60">
               Transparent rates with no hidden fees
             </p>
+            <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-6 text-white/45">
+              Final quotes combine the hourly bartender rate, guest service
+              rate, selected add-ons, and event-specific needs. Alcohol is not
+              included unless confirmed in writing.
+            </p>
           </div>
         </section>
 
