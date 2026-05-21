@@ -5,10 +5,10 @@ export function ReadyToBook() {
   return (
     <section id="booking" className="border-t border-white/10 py-16">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold tracking-[0.08em] text-white md:text-4xl">
+        <h2 className="text-3xl font-bold not-italic tracking-[0.08em] text-white md:text-4xl">
           READY TO BOOK?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/60">
+        <p className="mx-auto mt-4 max-w-xl not-italic text-white/60">
           Contact LBV to reserve your date and customize your event package.
         </p>
         <a

@@ -108,8 +108,8 @@ function LuxuryPricingCard({
 
       <div className="relative z-10 flex min-h-[190px] flex-col items-end justify-between text-right">
         <div>
-          <h2 className="text-xl font-semibold text-white">{title}</h2>
-          <p className="mt-2 max-w-[180px] text-sm text-white/60">
+          <h2 className="not-italic text-xl font-semibold text-white">{title}</h2>
+          <p className="mt-2 max-w-[180px] text-sm not-italic text-white/60">
             {description}
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function PricingPage() {
       <main className="flex-1">
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-center text-4xl font-bold tracking-[0.16em] text-white md:text-5xl">
+            <h1 className="text-center text-4xl font-bold not-italic tracking-[0.16em] text-white md:text-5xl">
               SIMPLE PRICING
             </h1>
 
@@ -140,10 +140,10 @@ export default function PricingPage() {
               className="mx-auto mt-4 h-px max-w-sm bg-gradient-to-r from-transparent via-[#c6a15b] to-transparent"
             />
 
-            <p className="mx-auto mt-5 max-w-lg text-center text-xl text-white/60">
+            <p className="mx-auto mt-5 max-w-lg text-center text-xl not-italic text-white/60">
               Transparent rates with no hidden fees
             </p>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-6 text-white/45">
+            <p className="mx-auto mt-3 max-w-2xl text-center text-sm not-italic leading-6 text-white/45">
               Final quotes combine the hourly bartender rate, guest service
               rate, selected add-ons, and event-specific needs. Alcohol is not
               included unless confirmed in writing.
@@ -163,7 +163,7 @@ export default function PricingPage() {
 
         <section className="bg-[#161616] py-12">
           <div className="container mx-auto px-4">
-            <h2 className="mb-8 text-center text-2xl font-bold tracking-[0.14em] text-white">
+            <h2 className="mb-8 text-center text-2xl font-bold not-italic tracking-[0.14em] text-white">
               ADD-ONS
             </h2>
 
@@ -177,7 +177,7 @@ export default function PricingPage() {
 
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <h2 className="mb-8 text-center text-2xl font-bold text-white">
+            <h2 className="mb-8 text-center text-2xl font-bold not-italic text-white">
               What Our Clients Say
             </h2>
 

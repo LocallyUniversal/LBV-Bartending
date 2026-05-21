@@ -33,17 +33,17 @@ export default function OnUsPage() {
       <main className="flex-1">
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#d4af37]">
+            <p className="text-sm font-semibold uppercase not-italic tracking-[0.18em] text-[#d4af37]">
               Provided By LBV
             </p>
-            <h1 className="mt-4 text-4xl font-bold uppercase tracking-[0.16em] text-white md:text-5xl">
+            <h1 className="mt-4 text-4xl font-bold uppercase not-italic tracking-[0.16em] text-white md:text-5xl">
               On Us
             </h1>
             <div
               aria-hidden="true"
               className="mx-auto mt-4 h-px max-w-sm bg-gradient-to-r from-transparent via-[#c6a15b] to-transparent"
             />
-            <p className="mx-auto mt-5 max-w-2xl text-xl text-white/60">
+            <p className="mx-auto mt-5 max-w-2xl text-xl not-italic text-white/60">
               The essentials we bring to help your event bar feel smooth,
               stocked, and ready.
             </p>
@@ -71,8 +71,8 @@ export default function OnUsPage() {
                       />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold text-white">{title}</h2>
-                      <p className="mt-2 text-sm leading-6 text-white/60">
+                      <h2 className="text-2xl font-bold not-italic text-white">{title}</h2>
+                      <p className="mt-2 text-sm not-italic leading-6 text-white/60">
                         {description}
                       </p>
                     </div>
